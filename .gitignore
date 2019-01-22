@@ -2,3 +2,7 @@
 .project
 .settings/
 target/
+build/
+/.metadata/
+.idea
+*.iml
