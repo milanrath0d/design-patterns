@@ -1,21 +1,25 @@
 package structural.proxy.virtual;
 
-public class RealImage implements IfImage{
+import lombok.AllArgsConstructor;
 
-	@Override
-	public void displayImage() {
-		
-		System.out.println("Image displayed");
-		
-		
-		
-	}
-	
-	public void loadImage(){
-		System.out.println("Image loaded");
-		displayImage();
-	}
+/**
+ * Real image
+ *
+ * @author Milan Rathod
+ */
+@AllArgsConstructor
+public class RealImage implements Image {
 
-	
-	
+    private String name;
+
+    @Override
+    public void displayImage() {
+        System.out.println("Image: " + name + " Displayed");
+    }
+
+    public void loadImage() {
+        System.out.println("Image: " + name + " Loading!!!");
+        displayImage();
+    }
+
 }

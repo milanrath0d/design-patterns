@@ -3,18 +3,21 @@ package behavioral.interpreter;
 import java.util.Calendar;
 import java.util.Date;
 
-public class MonthExpression extends Expression {
+/**
+ * Expression used for interpreting month
+ *
+ * @author Milan Rathod
+ */
+public class MonthExpression implements Expression {
 
-	void evalute(Context context) {
-		
-		String expression=context.getExpression();
-		Date date=context.getDate();
-		Calendar cal=Calendar.getInstance();
-		cal.setTime(date);
-		String exp=expression.replaceAll("MM",String.valueOf(cal.get(Calendar.MONTH)));
-		context.setExpression(exp);
-		
-
-	}
-
+    @Override
+    public String interpreter(Context context) {
+        String expression = context.getFormat();
+        Date date = context.getDate();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        String exp = expression.replaceAll("MM", String.valueOf(cal.get(Calendar.MONTH) + 1));
+        context.setFormat(exp);
+        return context.getFormat();
+    }
 }

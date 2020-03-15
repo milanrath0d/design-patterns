@@ -1,8 +1,10 @@
 package creational.prototype;
 
-public interface Animal extends Cloneable{
+/**
+ * @author Milan Rathod
+ */
+public interface Animal extends Cloneable {
 
-	
-	public Animal clone();
-	
+    Animal clone();
+
 }

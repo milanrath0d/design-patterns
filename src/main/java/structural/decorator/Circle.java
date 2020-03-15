@@ -1,32 +1,19 @@
 package structural.decorator;
 
+/**
+ * @author Milan Rathod
+ */
 public class Circle implements Shape {
 
-	protected Shape shape;
-	
-	
-	public Circle(Shape shape) {
-		super();
-		this.shape = shape;
-	}
+    protected Shape shape;
 
+    public Circle(Shape shape) {
+        super();
+        this.shape = shape;
+    }
 
-
-	public Shape getShape() {
-		return shape;
-	}
-
-
-
-	public void setShape(Shape shape) {
-		this.shape = shape;
-	}
-
-
-	public String draw() {
-		return shape.draw();
-
-	}
-	
+    public String draw() {
+        return shape.draw();
+    }
 
 }

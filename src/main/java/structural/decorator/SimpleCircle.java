@@ -1,13 +1,13 @@
 package structural.decorator;
 
-import java.util.HashMap;
+/**
+ * @author Milan Rathod
+ */
+public class SimpleCircle implements Shape {
 
-public class SimpleCircle implements Shape{
+    @Override
+    public String draw() {
+        return "Simple circle";
+    }
 
-	@Override
-	public String draw() {
-		return "Simple circle";
-	}
-
-	
 }
