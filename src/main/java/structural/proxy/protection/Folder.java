@@ -1,10 +1,12 @@
 package structural.proxy.protection;
 
-public class Folder implements IfFolder {
+/**
+ * @author Milan Rathod
+ */
+public interface Folder {
 
-	@Override
-	public void readWriteAccess() {
-		System.out.println("You have Read/Write Access");
-	}
+    void readAccess();
+
+    void writeAccess();
 
 }

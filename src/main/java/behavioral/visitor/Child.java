@@ -1,28 +1,22 @@
 package behavioral.visitor;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * @author Milan Rathod
+ */
+@Getter
+@Setter
+@AllArgsConstructor
 public class Child implements Visitable {
-	
-	private String name;
-	
-	
 
-	public String getName() {
-		return name;
-	}
+    private String name;
 
-
-
-	public Child(String name) {
-		super();
-		this.name = name;
-	}
-
-
-
-	@Override
-	public void accept(Visitor visitor) {
-		visitor.visit(this);
-
-	}
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 
 }

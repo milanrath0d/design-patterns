@@ -1,14 +1,15 @@
 package structural.decorator;
 
-public class GreenCircle extends Circle{
+/**
+ * @author Milan Rathod
+ */
+public class GreenCircle extends Circle {
 
-	public GreenCircle(Shape shape) {
-		super(shape);
-		
-	}
+    public GreenCircle(Shape shape) {
+        super(shape);
+    }
 
-	public String draw() {
-		return shape.draw()+" Green Circle";
-
-	}
+    public String draw() {
+        return shape.draw() + " Green Circle";
+    }
 }

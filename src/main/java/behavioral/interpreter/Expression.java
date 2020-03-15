@@ -1,6 +1,10 @@
 package behavioral.interpreter;
 
-public abstract class Expression {
+/**
+ * @author Milan Rathod
+ */
+public interface Expression {
 
-	abstract void evalute(Context context);
+    String interpreter(Context context);
+
 }
