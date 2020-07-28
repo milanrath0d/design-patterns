@@ -8,7 +8,7 @@ public class Singleton {
     private static Singleton singleton = null;
 
     private Singleton() {
-
+        // Private Constructor
     }
 
     public static Singleton getInstance() {
