@@ -1,31 +1,21 @@
 package creational.factory;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * For testing factory design pattern
+ * Test class for factory method pattern
  *
  * @author Milan Rathod
  */
-public class FactoryTest {
+class FactoryTest {
 
     @Test
-    public void testSeaAnimalFactory() {
-        AnimalFactory animalFactory = AnimalFactory.getAnimalFactory("sea");
+    void testGetPolygon() {
+        assertEquals("square", PolygonFactory.getPolygon(4).getType());
 
-        Animal animal = animalFactory.getAnimal("fish");
-
-        Assert.assertEquals(animal.speak(), "chi chi");
-    }
-
-    @Test
-    public void testLandAnimalFactory() {
-        AnimalFactory animalFactory = AnimalFactory.getAnimalFactory("land");
-
-        Animal animal = animalFactory.getAnimal("cat");
-
-        Assert.assertEquals(animal.speak(), "Meow!");
+        assertEquals("triangle", PolygonFactory.getPolygon(3).getType());
     }
 
 }

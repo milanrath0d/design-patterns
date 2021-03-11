@@ -1,5 +1,8 @@
 package behavioral.observer;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +11,8 @@ import java.util.List;
  *
  * @author Milan Rathod
  */
+@Setter
+@Getter
 public class Product extends Subject {
 
     private String name;
@@ -16,7 +21,7 @@ public class Product extends Subject {
 
     private String availability;
 
-    private List<Observer> observerList = new ArrayList<>();
+    private final List<Observer> observerList = new ArrayList<>();
 
     public Product(String name, int price, String availability) {
         super();
@@ -25,33 +30,14 @@ public class Product extends Subject {
         this.availability = availability;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public List<Observer> getObservers() {
-        return observerList;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
     public String getAvailability() {
         return availability;
     }
 
     public void setAvailability(String availability) {
         this.availability = availability;
-        System.out.println("Changed on the availability of product");
+        System.out.println("Product: " + name + " is now available!");
+        System.out.println("Notifying every observers");
         notifyObservers();
     }
 
@@ -67,15 +53,7 @@ public class Product extends Subject {
 
     @Override
     public void notifyObservers() {
-
-        System.out.println("Notifying every observer");
-
-        System.out.println("Product Name : " + getName() + " Price : " + getPrice());
-
-        for (Observer observer : observerList) {
-
-            observer.update(this.availability);
-        }
+        observerList.forEach(observer -> observer.update(this.availability));
     }
 
 }

@@ -7,12 +7,13 @@ package behavioral.command;
  */
 public class MenuOptions {
 
-    private Command openCommand;
-    private Command saveCommand;
-    private Command closeCommand;
+    private final Command openCommand;
+
+    private final Command saveCommand;
+
+    private final Command closeCommand;
 
     public MenuOptions(Command openCommand, Command saveCommand, Command closeCommand) {
-        super();
         this.openCommand = openCommand;
         this.saveCommand = saveCommand;
         this.closeCommand = closeCommand;

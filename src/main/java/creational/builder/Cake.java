@@ -1,10 +1,11 @@
 package creational.builder;
 
+import lombok.Getter;
+
 /**
- * Add Description
- *
  * @author Milan Rathod
  */
+@Getter
 public class Cake {
 
     private final double sugar;

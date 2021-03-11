@@ -14,7 +14,7 @@ public class IteratorMain {
         notificationCollection.add(new Notification("notification 2"));
         notificationCollection.add(new Notification("notification 3"));
 
-        Iterator<Notification> iterator = notificationCollection.createIterator();
+        Iterator<Notification> iterator = notificationCollection.iterator();
 
         while (iterator.hasNext()) {
             System.out.println(iterator.next().toString());

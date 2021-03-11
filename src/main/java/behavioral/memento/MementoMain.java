@@ -8,21 +8,22 @@ package behavioral.memento;
 public class MementoMain {
 
     public static void main(String[] args) {
-        Caretaker caretaker = new Caretaker();
+        FileWriterCareTaker caretaker = new FileWriterCareTaker();
 
-        Originator originator = new Originator();
+        FileWriterUtil fileWriterUtil = new FileWriterUtil("test.txt");
 
-        originator.set("Article 1");
-        originator.set("Article 2");
+        fileWriterUtil.write("First set of data\n");
 
-        caretaker.addMemento(originator.save());
+        System.out.println(fileWriterUtil);
 
-        originator.set("Article 3");
+        caretaker.save(fileWriterUtil);
 
-        caretaker.addMemento(originator.save());
+        fileWriterUtil.write("Second set of data\n");
 
-        originator.set("Article 4");
+        System.out.println(fileWriterUtil);
 
-        originator.restore(caretaker.getMemento(1));
+        caretaker.undo(fileWriterUtil);
+
+        System.out.println(fileWriterUtil);
     }
 }

@@ -7,7 +7,7 @@ package structural.adapter;
  */
 public class MediaAdapter implements MediaPlayer {
 
-    private AdvancedMediaPlayer advancedMediaPlayer;
+    private final AdvancedMediaPlayer advancedMediaPlayer;
 
     public MediaAdapter(AdvancedMediaPlayer advancedMediaPlayer) {
         this.advancedMediaPlayer = advancedMediaPlayer;

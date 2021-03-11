@@ -11,14 +11,14 @@ public class NotificationCollection implements Collection<Notification> {
 
     private int items = 0;
 
-    private Notification[] notifications;
+    private final Notification[] notifications;
 
     public NotificationCollection() {
         notifications = new Notification[MAX_ITEMS];
     }
 
     @Override
-    public Iterator<Notification> createIterator() {
+    public Iterator<Notification> iterator() {
         return new NotificationIterator(notifications);
     }
 

@@ -6,6 +6,7 @@ package creational.singleton;
  * @author Milan Rathod
  */
 public enum EnumSingleton {
+
     INSTANCE;
 
     public void show() {

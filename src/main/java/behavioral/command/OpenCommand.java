@@ -7,15 +7,14 @@ package behavioral.command;
  */
 public class OpenCommand implements Command {
 
-    private WordDocument WordDocument;
+    private final WordDocument wordDocument;
 
     public OpenCommand(WordDocument wordDocument) {
-        super();
-        WordDocument = wordDocument;
+        this.wordDocument = wordDocument;
     }
 
     public void execute() {
-        WordDocument.open();
+        wordDocument.open();
     }
 
 }

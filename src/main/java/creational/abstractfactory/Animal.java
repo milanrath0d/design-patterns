@@ -1,4 +1,4 @@
-package creational.factory;
+package creational.abstractfactory;
 
 /**
  * Animal object

@@ -7,7 +7,7 @@ package behavioral.iterator;
  */
 public interface Collection<T> {
 
-    Iterator<T> createIterator();
+    Iterator<T> iterator();
 
     void add(T t);
 }

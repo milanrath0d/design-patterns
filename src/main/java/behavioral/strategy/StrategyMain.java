@@ -8,14 +8,8 @@ package behavioral.strategy;
 public class StrategyMain {
 
     public static void main(String[] args) {
-        Application browser = new Browser();
-        Application postman = new Postman();
+        Application application = new Application();
 
-        browser.authenticate();
-        postman.authenticate();
-
-        postman.setAuthentication(new BasicAuthentication());
-
-        postman.authenticate();
+        application.authenticate(new BasicAuthentication());
     }
 }

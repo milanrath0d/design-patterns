@@ -9,13 +9,12 @@ import java.util.List;
  */
 public class HotelFacade {
 
-    private Hotel vegRestaurant;
+    private final Hotel vegRestaurant;
 
-    private Hotel nonVegRestaurant;
+    private final Hotel nonVegRestaurant;
 
     public HotelFacade() {
         vegRestaurant = new VegRestaurant();
-
         nonVegRestaurant = new NonVegRestaurant();
     }
 

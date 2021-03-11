@@ -13,8 +13,7 @@ public class CoffeeBuilder extends BeverageBuilder {
     @Override
     void setBeverageType() {
         System.out.println("Making Coffee");
-        getBeverage().setBevarageName("Coffee");
-
+        getBeverage().setBeverageName("Coffee");
     }
 
     @Override

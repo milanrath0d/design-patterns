@@ -3,9 +3,12 @@ package behavioral.mediator;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Milan Rathod
+ */
 public class ChatMediatorImpl implements ChatMediator {
 
-    private List<User> users;
+    private final List<User> users;
 
     public ChatMediatorImpl() {
         users = new ArrayList<>();

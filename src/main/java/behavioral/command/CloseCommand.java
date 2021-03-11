@@ -7,15 +7,14 @@ package behavioral.command;
  */
 public class CloseCommand implements Command {
 
-    private WordDocument WordDocument;
+    private final WordDocument wordDocument;
 
     public CloseCommand(WordDocument wordDocument) {
-        super();
-        WordDocument = wordDocument;
+        this.wordDocument = wordDocument;
     }
 
     public void execute() {
-        WordDocument.close();
+        wordDocument.close();
     }
 
 }

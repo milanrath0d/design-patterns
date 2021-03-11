@@ -27,10 +27,10 @@ public class FlyWeightMain {
      * Utility methods to get a random player type
      */
     public static String getRandPlayerType() {
-        Random r = new Random();
+        Random random = new Random();
 
         // Will return an integer between [0,2)
-        int randInt = r.nextInt(playerType.length);
+        int randInt = random.nextInt(playerType.length);
 
         // return the player stored at index 'randInt'
         return playerType[randInt];
@@ -40,10 +40,10 @@ public class FlyWeightMain {
      * Utility methods to get a random weapon
      */
     public static String getRandWeapon() {
-        Random r = new Random();
+        Random random = new Random();
 
         // Will return an integer between [0,5)
-        int randInt = r.nextInt(weapons.length);
+        int randInt = random.nextInt(weapons.length);
 
         // Return the weapon stored at index 'randInt'
         return weapons[randInt];

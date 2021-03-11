@@ -7,7 +7,7 @@ package behavioral.iterator;
  */
 public class NotificationIterator implements Iterator<Notification> {
 
-    private Notification[] notifications;
+    private final Notification[] notifications;
 
     private int pos = 0;
 
