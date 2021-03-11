@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class PlayerFactory {
 
-    private static Map<String, Player> map = new HashMap<>();
+    private static final Map<String, Player> map = new HashMap<>();
 
     public static Player getPlayer(String type) {
         if (map.containsKey(type)) {
@@ -33,6 +33,5 @@ public class PlayerFactory {
             return player;
         }
     }
-
 
 }

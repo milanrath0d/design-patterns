@@ -7,9 +7,9 @@ package structural.composite;
  */
 public class Developer implements Employee {
 
-    private String name;
+    private final String name;
 
-    private String designation;
+    private final String designation;
 
     public Developer(String name) {
         this.name = name;

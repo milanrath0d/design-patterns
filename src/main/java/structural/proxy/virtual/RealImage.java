@@ -7,19 +7,22 @@ import lombok.AllArgsConstructor;
  *
  * @author Milan Rathod
  */
-@AllArgsConstructor
 public class RealImage implements Image {
 
-    private String name;
+    private final String name;
+
+    public RealImage(String name) {
+        this.name = name;
+        loadImage();
+    }
 
     @Override
     public void displayImage() {
-        System.out.println("Image: " + name + " Displayed");
+        System.out.println("Image: " + name + " Displayed!");
     }
 
     public void loadImage() {
         System.out.println("Image: " + name + " Loading!!!");
-        displayImage();
     }
 
 }

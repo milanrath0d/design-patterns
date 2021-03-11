@@ -16,11 +16,11 @@ public class Beverage {
 
     private int sugar;
 
-    private String bevarageName;
+    private String beverageName;
 
     @Override
     public String toString() {
-        return "Beverage [water=" + water + ", milk=" + milk + ", sugar=" + sugar + ", bevarageName=" + bevarageName
+        return "Beverage [water=" + water + ", milk=" + milk + ", sugar=" + sugar + ", beverageName=" + beverageName
                 + "]";
     }
 

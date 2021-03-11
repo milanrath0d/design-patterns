@@ -5,25 +5,12 @@ package behavioral.strategy;
  *
  * @author Milan Rathod
  */
-abstract public class Application {
-
-    protected Authentication authentication;
-
-    /**
-     * Dummy method
-     */
-    public String reusableCode() {
-        return "Reusable code being used in sub class";
-    }
-
-    public void setAuthentication(Authentication authentication) {
-        this.authentication = authentication;
-    }
+public class Application {
 
     /**
      * Actual authentication done here
      */
-    public void authenticate() {
+    public void authenticate(Authentication authentication) {
         System.out.println(authentication.performAuthentication());
     }
 }

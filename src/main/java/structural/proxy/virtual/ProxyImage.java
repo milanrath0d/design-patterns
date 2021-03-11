@@ -9,7 +9,7 @@ public class ProxyImage implements Image {
 
     private RealImage realImage;
 
-    private String name;
+    private final String name;
 
     public ProxyImage(String name) {
         this.name = name;
@@ -19,10 +19,8 @@ public class ProxyImage implements Image {
     public void displayImage() {
         if (realImage == null) {
             realImage = new RealImage(name);
-            realImage.loadImage();
-        } else {
-            realImage.displayImage();
         }
+        realImage.displayImage();
     }
 
 }

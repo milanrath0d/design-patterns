@@ -8,9 +8,9 @@ import java.sql.DriverManager;
  */
 public class ConnectionPool extends ObjectPool<Connection> {
 
-    private String driver;
+    private final String driver;
 
-    private String url;
+    private final String url;
 
     public ConnectionPool(String driver, String url) {
         this.driver = driver;

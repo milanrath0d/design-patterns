@@ -15,7 +15,6 @@ public class StateMain {
         machine.ejectCard();
         machine.insertCard();
         machine.ejectCard();
-
     }
 
 }

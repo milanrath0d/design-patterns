@@ -7,15 +7,14 @@ package behavioral.command;
  */
 public class SaveCommand implements Command {
 
-    private WordDocument WordDocument;
+    private final WordDocument wordDocument;
 
     public SaveCommand(WordDocument wordDocument) {
-        super();
-        WordDocument = wordDocument;
+        this.wordDocument = wordDocument;
     }
 
     public void execute() {
-        WordDocument.save();
+        wordDocument.save();
     }
 
 }

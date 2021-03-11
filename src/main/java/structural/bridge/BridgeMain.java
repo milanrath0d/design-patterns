@@ -10,11 +10,12 @@ import java.util.Scanner;
 public class BridgeMain {
 
     public static void main(String[] args) {
-        Scanner sn = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Input message length(short/long): ");
-        String messageType = sn.next();
+        String messageType = scanner.next();
+        scanner.nextLine();
         System.out.print("Message: ");
-        String message = sn.next();
+        String message = scanner.nextLine();
 
         if (messageType.equalsIgnoreCase("LONG")) {
             Message longMessage = new LongMessage(new Email());

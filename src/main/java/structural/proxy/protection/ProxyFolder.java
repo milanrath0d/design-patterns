@@ -7,12 +7,13 @@ package structural.proxy.protection;
  */
 public class ProxyFolder implements Folder {
 
-    private Employee employee;
+    private final Employee employee;
 
-    private Folder folder = new RealFolder();
+    private final Folder folder;
 
     public ProxyFolder(Employee employee) {
         this.employee = employee;
+        this.folder = new RealFolder();
     }
 
     @Override
@@ -25,7 +26,7 @@ public class ProxyFolder implements Folder {
         if (employee.getDesignation().equalsIgnoreCase("manager")) {
             folder.writeAccess();
         } else {
-            System.out.println("you do not have write access");
+            System.out.println("You do not have Write access");
         }
     }
 }
