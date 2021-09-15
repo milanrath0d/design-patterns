@@ -1,8 +1,5 @@
 package behavioral.observer;
 
-import java.util.Iterator;
-import java.util.List;
-
 /**
  * Demo class for observer design pattern
  *

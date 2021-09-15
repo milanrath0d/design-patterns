@@ -1,7 +1,5 @@
 package structural.proxy.virtual;
 
-import lombok.AllArgsConstructor;
-
 /**
  * Real image
  *
