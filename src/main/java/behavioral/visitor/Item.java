@@ -5,5 +5,5 @@ package behavioral.visitor;
  */
 public interface Item {
 
-    public int accept(ShoppingCartVisitor visitor);
+    int accept(ShoppingCartVisitor visitor);
 }

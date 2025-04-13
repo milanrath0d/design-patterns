@@ -18,12 +18,12 @@ public class ConnectionPool extends ObjectPool<Connection> {
         try {
             Class.forName(driver).newInstance();
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
     }
 
     @Override
-    protected Connection create() {
+    protected Connection createConnection() {
         try {
             return DriverManager.getConnection(url);
         } catch (Exception e) {
@@ -37,7 +37,7 @@ public class ConnectionPool extends ObjectPool<Connection> {
         try {
             return !(connection.isClosed());
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
             return false;
         }
     }
@@ -47,7 +47,7 @@ public class ConnectionPool extends ObjectPool<Connection> {
         try {
             connection.close();
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
     }
 
