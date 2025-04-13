@@ -21,7 +21,7 @@ public abstract class ObjectPool<T> {
         locked = new HashMap<>();
     }
 
-    protected abstract T create();
+    protected abstract T createConnection();
 
     public abstract boolean validate(T object);
 
@@ -30,7 +30,7 @@ public abstract class ObjectPool<T> {
     /**
      * @return Object from object pool
      */
-    public synchronized T checkOut() {
+    public synchronized T create() {
         Long now = System.currentTimeMillis();
         if (unlocked.size() > 0) {
             for (Map.Entry<T, Long> entry : unlocked.entrySet()) {
@@ -48,12 +48,12 @@ public abstract class ObjectPool<T> {
                 }
             }
         }
-        T object = create();
+        T object = this.createConnection();
         locked.put(object, now);
         return object;
     }
 
-    public synchronized void checkIn(T object) {
+    public synchronized void releaseConnection(T object) {
         locked.remove(object);
         unlocked.put(object, System.currentTimeMillis());
     }

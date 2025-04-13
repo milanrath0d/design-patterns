@@ -5,12 +5,12 @@ package behavioral.strategy;
  *
  * @author Milan Rathod
  */
-public class Application {
+public class AuthenticationService {
 
     /**
      * Actual authentication done here
      */
-    public void authenticate(Authentication authentication) {
-        System.out.println(authentication.performAuthentication());
+    public String authenticate(Authentication authentication) {
+        return authentication.performAuthentication();
     }
 }
