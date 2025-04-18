@@ -10,9 +10,9 @@ public class ColorFactory implements AbstractFactory<Color> {
     @Override
     public Color create(String type) {
         Color color = null;
-        if ("brown".equals(type)) {
+        if ("Brown".equals(type)) {
             color = new Brown();
-        } else if ("white".equals(type)) {
+        } else if ("White".equals(type)) {
             color = new White();
         }
         return color;
