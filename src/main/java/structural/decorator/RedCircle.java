@@ -10,6 +10,6 @@ public class RedCircle extends Circle {
     }
 
     public String draw() {
-        return shape.draw() + " Red Circle";
+        return shape.draw() + " with red color";
     }
 }

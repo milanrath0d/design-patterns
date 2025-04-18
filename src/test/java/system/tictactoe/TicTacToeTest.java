@@ -1,4 +1,4 @@
-package system;
+package system.tictactoe;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

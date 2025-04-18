@@ -5,15 +5,17 @@ package behavioral.chainofresponsibility;
  */
 public class Manager extends Employee {
 
-    private static final int MAX_DAYS_OF_LEAVES_APPROVED = 20;
+    private static final int MAX_DAYS_OF_LEAVES_APPROVED = 30;
 
     @Override
     public void applyLeave(String employeeName, int days) {
-        if (days < MAX_DAYS_OF_LEAVES_APPROVED) {
+        if (days <= MAX_DAYS_OF_LEAVES_APPROVED) {
             approved(employeeName, days);
-        } else {
+        } else if (supervisor != null) {
             System.out.println("Leave Request being forwarded from " + this.getClass().getSimpleName() + " to " + supervisor.getClass().getSimpleName());
             supervisor.applyLeave(employeeName, days);
+        } else {
+            System.out.println("Leave Request DENIED for " + employeeName + " for " + days + " days (exceeds maximum allowed)");
         }
     }
 

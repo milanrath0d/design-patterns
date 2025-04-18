@@ -7,7 +7,7 @@ public class SimpleCircle implements Shape {
 
     @Override
     public String draw() {
-        return "Simple circle";
+        return "Drawing a simple circle";
     }
 
 }

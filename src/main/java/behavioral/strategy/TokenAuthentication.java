@@ -9,6 +9,6 @@ public class TokenAuthentication implements Authentication {
 
     @Override
     public String performAuthentication() {
-        return "Authenticating using token";
+        return "Authenticated with Token";
     }
 }
